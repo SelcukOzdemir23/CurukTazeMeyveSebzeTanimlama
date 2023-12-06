@@ -30,11 +30,11 @@ waste_labels = {0: 'taze_elma',
 
 
 # uygulama yükle
-st.title("SEM Atık Tahmin Uygulaması")
-st.write("Lütfen bir SEM görüntüsü yükleyin.")
+st.title("Çürük - Taze Meyve ve Sebze Tahmin Uygulaması")
+st.write("Lütfen bir meyve ya da sebze yükleyin")
 
 # giriş yap
-uploaded_image = st.file_uploader("SEM Görüntüsünü Yükleyin", type=["jpg", "png", "jpeg"])
+uploaded_image = st.file_uploader("Meyve ya da sebze yükle! ", type=["jpg", "png", "jpeg"])
 
 # resim işleme
 
