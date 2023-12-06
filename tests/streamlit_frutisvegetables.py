@@ -8,9 +8,8 @@ import plotly.express as px
 import os
 
 # model yükle
-path = os.path.dirname("B:\Dosya\Kodlar\StaleAndFreshFruitsAndVegetables\models\\")
-my_file = path + "\\fine_tuned_model.h5"
-model = tf.keras.models.load_model(open(my_file),"rb")
+path = os.path.dirname("B:\\Dosya\\Kodlar\\StaleAndFreshFruitsAndVegetables\\models\\fine_tuned_model.h5")
+model = tf.keras.models.load_model(open(path),"rb")
 
 # Etiketler
 waste_labels = {0: 'taze_elma',
