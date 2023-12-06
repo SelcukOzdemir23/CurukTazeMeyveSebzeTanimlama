@@ -9,7 +9,7 @@ import os
 
 # model yükle
 path = os.path.dirname("B:\\Dosya\\Kodlar\\StaleAndFreshFruitsAndVegetables\\models\\fine_tuned_model.h5")
-model = tf.keras.models.load_model(open(path),"rb")
+model = tf.keras.models.load_model(open(path))
 
 # Etiketler
 waste_labels = {0: 'taze_elma',
