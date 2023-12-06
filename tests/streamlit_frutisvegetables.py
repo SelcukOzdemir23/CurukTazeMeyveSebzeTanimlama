@@ -7,7 +7,7 @@ from tensorflow.keras.applications.efficientnet import preprocess_input
 import plotly.express as px
 
 # model yükle
-model = tf.keras.models.load_model("B:\\Dosya\Kodlar\\StaleAndFreshFruitsAndVegetables\\models\\fine_tuned_model.h5")
+model = tf.keras.models.load_model("B:/Dosya\Kodlar/StaleAndFreshFruitsAndVegetables/models/fine_tuned_model.h5")
 
 # Etiketler
 waste_labels = {0: 'taze_elma',
