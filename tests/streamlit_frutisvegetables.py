@@ -5,9 +5,10 @@ from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.efficientnet import preprocess_input
 #from tensorflow.keras.applications.resnet50 import preprocess_input
 import plotly.express as px
+import os
 
 # model yükle
-model = tf.keras.models.load_model("fine_tuned_model.h5")
+model = tf.keras.models.load_model("\\fine_tuned_model.h5")
 
 # Etiketler
 waste_labels = {0: 'taze_elma',
@@ -37,6 +38,13 @@ st.write("Lütfen bir meyve ya da sebze yükleyin")
 uploaded_image = st.file_uploader("Meyve ya da sebze yükle! ", type=["jpg", "png", "jpeg"])
 
 # resim işleme
+# def file_selector(folder_path='.'):
+#     filenames = os.listdir(folder_path)
+#     selected_filename = st.selectbox('Select a file', filenames)
+#     return os.path.join(folder_path, selected_filename)
+
+# filename = file_selector()
+# st.write('You selected `%s`' % filename)
 
 if uploaded_image is not None:
     # Görüntüyü modelin girdi boyutuna yeniden boyutlandırın
@@ -67,3 +75,4 @@ if uploaded_image is not None:
     # Pasta grafiği
     fig_pie = px.pie(values=probabilities, names=labels, title="Tahmin İhtimalleri (Pasta Grafiği)")
     st.plotly_chart(fig_pie)
+
